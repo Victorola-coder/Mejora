@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#textInput").focusout(function () {
+          $("#message").text("Focus removed from input field");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <textarea id="textInput" rows="4" cols="50">
+Hello, this is a test.</textarea
+        >
+        <input type="button" value="Input Button" />
+      </fieldset>
+    </form>
+    <p id="message"></p>
+    <button id="button1">Click to see the effect</button>
+  </body>
+</html>
