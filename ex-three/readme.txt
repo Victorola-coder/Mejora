@@ -1,22 +1,39 @@
-Exercise 3: Display Checked Attribute and Property
+Exercise 3: Displaying Checkbox State
+
+1. HTML Structure:
+
+Create a checkbox element with the ID "myCheckbox" and a label (e.g., "Check me").
+Add a paragraph element with the ID "message" to display the checkbox state information later.
 
 
-Steps:
+2. jQuery Code:
+
+Include the jQuery library.
+Wrap the code within the $(document).ready(function() { ... }) function.
 
 
-HTML Setup:
+3. Selecting Checkbox:
 
-Created a checkbox input element with an associated label.
-jQuery Script:
-
-Wrote jQuery script to display the checked attribute and property of the checkbox as it changes.
-Used the .change() event handler to detect changes in the checkbox state.
-Displayed the checked attribute and property using .attr('checked') and .prop('checked') methods, respectively.
+Use the selector $('#myCheckbox') to target the specific checkbox element with the ID "myCheckbox".
 
 
+4. Change Event:
 
-Code Explanation:
+Utilize the .change(function() { ... }) method to attach a change event handler to the checkbox. This handler triggers whenever the checkbox state changes (checked/unchecked).
 
-The jQuery selector $('#check1') selects the checkbox input element.
-The .change() method attaches an event handler function to the checkbox input element.
-Inside the event handler, the .attr('checked') method retrieves the value of the checked attribute, while the .prop('checked') method retrieves the value of the checked property.
+
+5. Retrieving State Information:
+
+Inside the event handler:
+Use $(this).prop('checked') to get the current checked state of the checkbox as a boolean value (true/false).
+Use $(this).attr('checked') to get the value of the checked attribute (string "checked" or undefined).
+
+6. Displaying Information:
+
+Construct a message string that combines both property and attribute values (e.g., using string concatenation).
+Use $('#message').text(message) to update the text content of the paragraph element with the ID "message" to display the constructed message, reflecting the checkbox state.
+
+
+Expected Outcome:
+
+When you click on the checkbox to toggle its state (checked/unchecked), the paragraph element
