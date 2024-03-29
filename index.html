@@ -3,29 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercise 1: Animating Divs</title>
-    <style>
-      .box {
-        width: 100px;
-        height: 100px;
-        background-color: blue;
-        margin: 20px;
-        display: none; /* Initially hide the divs */
-      }
-    </style>
+    <title>Exercise 2: Displaying Mouse Position</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function () {
-        // Delay the first div before showing it
-        $(".box:first").delay(1000).fadeIn(1000);
-
-        // Show the second div immediately
-        $(".box:last").fadeIn(1000);
+        $(document).mousemove(function (event) {
+          const xPos = event.pageX;
+          const yPos = event.pageY;
+          $("#position").text(`Mouse Position: X=${xPos}, Y=${yPos}`);
+        });
       });
     </script>
   </head>
   <body>
-    <div class="box"></div>
-    <div class="box"></div>
+    <p id="position">Mouse Position:</p>
   </body>
 </html>
