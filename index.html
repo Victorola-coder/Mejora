@@ -3,19 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercise 2: Displaying Mouse Position</title>
+    <title>Exercise 3: Counting Milliseconds Between Clicks</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function () {
-        $(document).mousemove(function (event) {
-          const xPos = event.pageX;
-          const yPos = event.pageY;
-          $("#position").text(`Mouse Position: X=${xPos}, Y=${yPos}`);
+        let startTime = 0;
+
+        $("p").click(function () {
+          if (startTime === 0) {
+            startTime = Date.now();
+          } else {
+            const elapsedTime = Date.now() - startTime;
+            alert(`Milliseconds between clicks: ${elapsedTime}`);
+            startTime = 0; // Reset start time for next click
+          }
         });
       });
     </script>
   </head>
   <body>
-    <p id="position">Mouse Position:</p>
+    <p>Click Me</p>
   </body>
 </html>
