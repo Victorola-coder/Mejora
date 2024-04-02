@@ -1,0 +1,6 @@
+/* Add media queries for responsive adjustments (e.g., smaller screens) */
+@media (max-width: 768px) {
+  #timeline-container {
+    width: 90%;
+  }
+}

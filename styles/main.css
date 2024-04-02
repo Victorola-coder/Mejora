@@ -1,0 +1,39 @@
+/* Basic styles for the timeline layout */
+#timeline-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.timeline-events {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-event {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.event-date {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.event-title,
+.event-description {
+  margin-left: 80px;
+}
+
+.event-title {
+  font-size: 18px;
+}
+
+.event-description {
+  font-size: 16px;
+}
