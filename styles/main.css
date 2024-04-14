@@ -1,39 +1,19 @@
-/* Basic styles for the timeline layout */
-#timeline-container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-}
-
-.timeline-events {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.timeline-event {
-  margin-bottom: 20px;
+#timeline {
+  width: 100%;
+  height: 300px;
   position: relative;
+  overflow-x: scroll;
 }
 
-.event-date {
-  display: block;
+.event {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.event-title,
-.event-description {
-  margin-left: 80px;
-}
-
-.event-title {
-  font-size: 18px;
-}
-
-.event-description {
-  font-size: 16px;
+.event.active {
+  background-color: green;
 }
